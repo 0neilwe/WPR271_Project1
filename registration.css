@@ -1,0 +1,100 @@
+/* Moses Chigwende && Kamohelo Mototo */
+/* Apply a blue border to the left of the form */
+form {
+    border-left: 80px solid #3498db; /* Blue color */
+    padding-left: 80px; /* Add some padding to the left */
+}
+
+/* Style the heading "Basic Details" in blue */
+h1 {
+    color: #3498db; /* Blue color */
+}
+
+/* Style labels in grey with a line below on hover */
+label {
+    color: #777; /* Grey color */
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 150px; /* Set a fixed width for labels */
+    transition: border-bottom 0.3s ease; /* Smooth transition */
+}
+
+label:hover {
+    border-bottom: 2px solid #777; /* Grey line on hover */
+}
+
+/* Style input fields with black text color */
+input, select {
+    color: #000; /* Black color */
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #777; /* Grey line below input */
+    transition: border-bottom 0.3s ease; /* Smooth transition for the underline */
+}
+
+/* Style focused input fields with a blue underline */
+input:focus, select:focus {
+    border-bottom: 2px solid #3498db; /* Blue line on focus */
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Style buttons with blue color on focus */
+button:focus {
+    outline: none; /* Remove the default focus outline */
+    border: 2px solid #3498db; /* Blue color */
+}
+
+/* Apply custom styles to the buttons */
+button[type="Continue"],
+button[type="Reset"] {
+    background-color: #fff; /* White background */
+    color: #777; /* Grey text color */
+    padding: 10px 20px;
+    border: none; /* No borders */
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+button[type="Continue"]:hover,
+button[type="Reset"]:hover {
+    background-color: #3498db; /* Blue background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+button[type="Continue"]:active,
+button[type="Reset"]:active {
+    background-color: #2980b9; /* Darker blue on click */
+}
+
+/* Apply margin below the buttons */
+button[type="Continue"],
+button[type="Reset"] {
+    margin-bottom: 20px;
+}
+
+/* Arrange form elements in a two-column layout */
+#BasicDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Customize layout for specific form elements */
+#BasicDetails > div {
+    grid-column: span 1;
+}
+
+/* Arrange email and user ID side by side */
+#Email,
+#userID {
+    display: block;
+    margin-bottom: 10px; /* Gap between fields */
+}
+
+/* Move the "Continue" button to the right */
+button[type="Continue"] {
+    margin-left: auto;
+}
